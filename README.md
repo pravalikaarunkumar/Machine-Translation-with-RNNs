@@ -51,7 +51,7 @@ Categorical cross-entropy is used as the loss function, which is appropriate for
 ## Training Process:
 1. Data Preprocessing: English and French sentences are cleaned, tokenized, and padded to uniform lengths.
 2. Model Compilation: The Vanilla RNN, GRU, and LSTM models are compiled using the RMSProp optimizer, with accuracy as the evaluation metric.
-3. Training: Each model is trained for 100 epochs on the training data with a batch size of 32, using early stopping to prevent overfitting.
+3. Training: Each model is trained for 10 epochs on the training data with a batch size of 128, using early stopping to prevent overfitting.
 4. Evaluation: After training, the models are evaluated on the test set to measure their accuracy and translation performance.
 
 ## Results:
