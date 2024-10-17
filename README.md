@@ -1,7 +1,7 @@
 # Study of RNNs - Vanilla RNN, GRU, and LSTM for Machine Translation (English to French)
 
 ## Introduction:
-This project implements and compares three types of Recurrent Neural Networks (RNNs) — Vanilla RNN, GRU (Gated Recurrent Unit), and LSTM (Long Short-Term Memory) — for a machine translation task. The task involves translating English sentences into French using the Hugging Face OPUS Book dataset. The primary goal is to evaluate the performance of each RNN variant in sequence-to-sequence translation tasks, comparing translation accuracy, training time, and overall performance.
+This project implements and compares three types of Recurrent Neural Networks (RNNs) — Vanilla RNN, GRU (Gated Recurrent Unit), and LSTM (Long Short-Term Memory) — for a machine translation task. The task involves translating English sentences into French using the Hugging Face OPUS Book dataset. The models were trained on a **TPU v2-8**, which accelerated the training process and allowed efficient handling of large datasets. The primary goal is to evaluate the performance of each RNN variant in sequence-to-sequence translation tasks, comparing translation accuracy, training time, and overall performance.
 
 ## Dataset:
 ### Hugging Face OPUS Book Dataset (EN-FR):
@@ -53,6 +53,9 @@ Categorical cross-entropy is used as the loss function, which is appropriate for
 2. Model Compilation: The Vanilla RNN, GRU, and LSTM models are compiled using the RMSProp optimizer, with accuracy as the evaluation metric.
 3. Training: Each model is trained for 10 epochs on the training data with a batch size of 128, using early stopping to prevent overfitting.
 4. Evaluation: After training, the models are evaluated on the test set to measure their accuracy and translation performance.
+
+## Hardware Used:
+The models were trained using **TPU v2-8** for accelerated training on large datasets and to take advantage of parallel processing. The use of TPU significantly reduced the training time compared to conventional GPUs, allowing faster experimentation and tuning of hyperparameters.
 
 ## Results:
 After training, the models' performance is evaluated in terms of accuracy and translation quality. The results demonstrate how well each architecture performs for the machine translation task:
